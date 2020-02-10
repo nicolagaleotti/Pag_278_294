@@ -22,6 +22,30 @@ namespace Esercizio4_294  //DA FINIRE
                 if (numero >= MAX)
                     lista.Add(numero);  
             }
+            for (int i = 0; i < lista.Count; i++)
+            {
+                int temp;
+                for (int y = 0; y < lista.Count; y++)
+                {
+                    try
+                    {
+                        if(lista[y] > lista[y + 1])
+                        {
+                            temp = lista[y];
+                            lista[y] = lista[y + 1];
+                            lista[y + 1] = temp;
+                        }
+
+                    }
+                    catch { }
+                }
+            }
+            Console.WriteLine($"Numeri della lista ordinati maggiori o uguali a {MAX} :");
+            for (int i = 0; i < lista.Count; i++)
+            {
+                Console.WriteLine(lista[i]);
+            }
+            Console.ReadLine();
         }
     }
 }
