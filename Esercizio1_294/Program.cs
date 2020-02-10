@@ -19,23 +19,7 @@ namespace Esercizio1_294  //DA FINIRE
                 if (lista[i] % 2 == 0)
                     pari.Add(lista[i]);
             }
-            for (int i = 0; i < pari.Count; i++)
-            {
-                int temp;
-                for (int y = 0; y < pari.Count; y++)
-                {
-                    try
-                    {
-                        if (pari[y] > pari[y + 1])
-                        {
-                            temp = pari[y];
-                            pari[y] = pari[y + 1];
-                            pari[y + 1] = temp;
-                        }
-                    }
-                    catch { }
-                }
-            }
+            pari.Sort();
             Console.WriteLine("Numeri della lista:");
             for (int i = 0; i < lista.Count; i++)
             {
